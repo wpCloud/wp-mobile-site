@@ -1,5 +1,5 @@
 {
-    "name": "wpcloud/mobile-site",
+    "name": "wpcloud/wp-mobile-site",
     "require": {
         "composer/installers": "~1.0"
     },
@@ -7,7 +7,7 @@
     "repositories": [
       {
         "type": "composer",
-        "url": "https://wordpress-theme:abde08cbdaa1d0a7dc6f8779a729cbd3e8f02cd3@repository.usabilitydynamics.com"
+        "url": "https://repository.usabilitydynamics.com"
       },
       {
         "type": "composer",
