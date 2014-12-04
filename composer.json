@@ -1,9 +1,11 @@
 {
     "name": "wpcloud/wp-mobile-site",
     "type": "wordpress-plugin",
+    "description": "Handler for mobile sites.",
     "require": {
         "composer/installers": "~1.0"
     },
+    "license": "GPL-3.0+",
     "repositories": [
       {
         "type": "composer",

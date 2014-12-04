@@ -1,9 +1,9 @@
 /**
  * Plugin Name: Mobile Site
  * Plugin URI: http://wpCloud.io
- * Description: Handler for "mobile" sites.
+ * Description: Handler for mobile sites.
  * Author: Usability Dynamics, Inc
- * Version: 0.1.0
+ * Version: 0.1.1
  * Network: true
  * Vertical: true
  * Author URI: http://wpCloud.io
