@@ -1,0 +1,24 @@
+{
+    "name": "wpcloud/mobile-site",
+    "require": {
+        "composer/installers": "~1.0"
+    },
+    "type": "wordpress-plugin",
+    "repositories": [
+      {
+        "type": "composer",
+        "url": "https://wordpress-theme:abde08cbdaa1d0a7dc6f8779a729cbd3e8f02cd3@repository.usabilitydynamics.com"
+      },
+      {
+        "type": "composer",
+        "url": "http://wpackagist.org"
+      }
+    ],
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "andypotanin",
+            "email": "andy.potanin@usabilitydynamics.com"
+        }
+    ]
+}
