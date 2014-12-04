@@ -5,6 +5,7 @@
     "require": {
         "composer/installers": "~1.0"
     },
+    "keywords": [ "wordpress", "wpcloud", "network", "mobile" ],
     "license": "GPL-3.0+",
     "repositories": [
       {
