@@ -1,9 +1,9 @@
 {
     "name": "wpcloud/wp-mobile-site",
+    "type": "wordpress-plugin",
     "require": {
         "composer/installers": "~1.0"
     },
-    "type": "wordpress-plugin",
     "repositories": [
       {
         "type": "composer",
@@ -20,5 +20,13 @@
             "name": "andypotanin",
             "email": "andy.potanin@usabilitydynamics.com"
         }
-    ]
+    ],
+    "config": {
+      "component-dir": "static/assets/vendor",
+      "github-protocols": [ "ssh" ],
+      "vendor-dir": "vendor",
+      "bin-dir": "vendor/.bin",
+      "discard-changes": true,
+      "optimize-autoloader": true
+    }
 }
