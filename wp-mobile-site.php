@@ -1,3 +1,4 @@
+<?php
 /**
  * Plugin Name: Mobile Site
  * Plugin URI: http://wpCloud.io
@@ -31,8 +32,44 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
  * @author Andy Potanin <andy.potanin@usabilitydynamics.com>
+ *
+ *
+ *
+ * get_option( 'site_type' )
+ *
  */
 
-add_action( 'admin_init', function() {
+
+add_action( 'plugins_loaded', function() {
+  global $current_blog;
+
+  if($_SERVER['REMOTE_ADDR'] === '68.118.9.33' ) {
+
+    $current_blog->_type = is_array( $current_blog->_type ) ? $current_blog->_type : array();
+
+    $current_blog->_type[] = 'mobile';
+
+    add_filter( 'site_option_site_type', function( $default = false ) {
+      return $default ? $default : 'mobile';
+    });
+
+  }
 
 });
+
+add_action( 'init', function() {
+  global $current_blog;
+
+  if( get_site_option( 'site_type' ) === 'mobile' ) {
+
+    // Hide toolbar
+    if( isset( $_GET[ 'phonegap' ] ) && $_GET[ 'phonegap' ] ) {}
+    add_filter('show_admin_bar', '__return_false' );
+
+    // @todo Disable non-mobile-friendly plugins
+    // remove_action( 'admin_notices', array( 'Jetpack', 'admin_connect_notice' ) );
+
+  }
+
+});
+
